@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <!-- SEO ve temel meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Kocaeli (Gebze, Darıca, Çayırova) operatörlü mobil vinç, Manitou ve forklift kiralama. Aynı gün keşif, hızlı fiyat, 7/24 destek.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="SİMAK VİNÇ MANİTOU">
+  <meta name="geo.region" content="TR-41">
+  <meta name="geo.placename" content="Gebze, Darıca, Çayırova">
+  <meta name="geo.position" content="40.7694;29.3733">
+  <meta name="ICBM" content="40.7694, 29.3733">
+  <title>Gebze & Darıca Manitou Kiralama | Telehandler Kiralık 7/24 | SİMAK VİNÇ</title>
+  <!-- Favicon - Google Arama Sonuçları için optimize edilmiş -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-192x192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Google Font ve stil - preconnect ile render-blocking azaltma -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+  <!-- Critical CSS (header + hero basics) inlined to avoid render-blocking -->
+  <style>
+    :root{--primary-color:#1A237E}
+    html,body{margin:0}
+    body{font-family:'Poppins',sans-serif}
+    header{background:var(--primary-color);color:#fff;position:sticky;top:0;z-index:1000;padding:12px 0}
+    .header-inner{display:flex;align-items:center;gap:16px}
+    .logo-text{font-weight:800;color:#fff}
+    .site-logo{height:40px;display:inline-block;vertical-align:middle;margin-right:10px}
+    .hero{min-height:360px;display:flex;align-items:center;justify-content:center;padding:56px 12px;color:#fff;background:#0b1220 url('img/opt/manitou.webp') center/cover no-repeat;overflow:hidden;max-height:100vh;position:relative}
+    .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;top:0;left:0;right:0;bottom:0}
+    .hero-video{width:100%;height:100%;object-fit:cover;display:block;top:0;left:0;right:0;bottom:0}
+    .hero-overlay{position:absolute;inset:0;z-index:1;background:rgba(0,0,0,0.4);pointer-events:none}
+    .hero-inner{position:relative;z-index:2;width:100%}
+
+    /* Blink animation for CTA texts */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.15; }
+    }
+    .blink { animation: blink 1.2s linear infinite; }
+    /* Only text should blink; apply this class to text spans inside buttons */
+    .blink-text { display:inline-block; animation: blink 1.2s linear infinite; }
+
+    /* Blink animation for hero CTAs - GPU-optimized with transform/opacity */
+    @keyframes blink-bg {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%     { opacity: 0.7; transform: scale(0.98); }
+    }
+    .hero-buttons .btn.blink-bg { 
+      animation: blink-bg 1.2s ease-in-out infinite;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-buttons .btn.blink-bg, .blink-text { animation: none !important; }
+    }
+
+    /* Improve touch targets on mobile */
+    .actions .call-btn, .actions .btn { padding:12px 14px; min-height:44px; min-width:44px }
+    .call-fixed-left, .whatsapp-fixed-left { min-width:56px; min-height:56px }
+    @media (max-width:700px){
+      .header-inner{gap:10px}
+      .logo-text{font-size:14px}
+      .hero{padding:40px 10px}
+      .btn{padding:12px 16px}
+    }
+
+
+    /* Highlights (Neden Bizi Seçmelisiniz) kart düzeni */
+    .highlights-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; align-items:start }
+    .highlight{ background:#fff; border-radius:12px; padding:20px; box-shadow:0 8px 24px rgba(12,34,64,0.06); border:1px solid rgba(10,20,40,0.04); transition:transform .18s ease, box-shadow .18s ease }
+    .highlight:hover, .highlight:focus-within{ transform:translateY(-6px); box-shadow:0 16px 40px rgba(12,34,64,0.09) }
+    .highlight .num{ font-weight:700; color:var(--primary-color); margin-bottom:8px }
+    .highlight .hl-icon{ display:inline-flex; width:48px; height:48px; align-items:center; justify-content:center; border-radius:10px; background:linear-gradient(180deg,rgba(26,35,126,0.06),rgba(26,35,126,0.03)); margin-bottom:10px }
+    .highlight h3{ margin:0 0 8px 0; color:var(--primary-color) }
+    .highlight p{ margin:0; color:#20324a; line-height:1.6 }
+
+    @media (max-width:1100px){ .highlights-grid{ grid-template-columns: repeat(2, 1fr) } }
+    @media (max-width:700px){ .highlights-grid{ grid-template-columns: 1fr } .highlight{ padding:16px } }
+    .page, .preview, .faq, .cta-strip { content-visibility:auto; contain:paint; }
+    .hero { contain:paint; }
+  </style>
+  <!-- Load minified main stylesheet without blocking render -->
+  <link rel="preload" href="css/style.min.css?v=20251209m" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.min.css?v=20251209m"></noscript>
+  <link rel="preload" as="image" href="img/opt/manitou.webp" imagesrcset="img/opt/manitou.webp 1600w, img/manitou.webp 2400w" imagesizes="(max-width: 1200px) 100vw, 1200px">
+  <!-- SEO / Social meta -->
+  <meta property="og:title" content="SİMAK VİNÇ MANİTOU">
+  <meta property="og:description" content="Kocaeli Darıca, Gebze, Çayırova ve Bayramoğlu'nda vinç, Manitou ve forklift kiralama hizmeti.">
+  <meta property="og:image" content="https://simakvincmanitou.com/img/manitou.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://simakvincmanitou.com/">
+  <link rel="alternate" hreflang="tr-TR" href="https://simakvincmanitou.com/">
+  <meta name="theme-color" content="#1A237E">
+  <meta property="og:url" content="https://simakvincmanitou.com/">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SİMAK VİNÇ MANİTOU">
+  <meta name="twitter:description" content="Kocaeli bölgesinde profesyonel vinç, Manitou ve forklift kiralama çözümleri.">
+  <meta name="twitter:image" content="https://simakvincmanitou.com/img/manitou.jpg">
+  <meta name="twitter:url" content="https://simakvincmanitou.com/">
+  <!-- FontAwesome removed (inline SVGs used to reduce external requests) -->
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SİMAK VİNÇ MANİTOU",
+    "description": "Gebze, Darıca, Çayırova, Eskihisar ve Bayramoğlu bölgelerinde profesyonel vinç kiralama, Manitou kiralama ve forklift kiralama hizmeti.",
+    "telephone": "+905354792083",
+    "email": "simakvinc@gmail.com",
+    "image": "https://simakvincmanitou.com/img/manitou.jpg",
+    "logo": "https://simakvincmanitou.com/img/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Darıca",
+      "addressLocality": "Kocaeli",
+      "addressRegion": "Marmara",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7694",
+      "longitude": "29.3733"
+    },
+    "url": "https://simakvincmanitou.com/",
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Gebze"},
+      {"@type": "City", "name": "Darıca"},
+      {"@type": "City", "name": "Çayırova"},
+      {"@type": "City", "name": "Eskihisar"},
+      {"@type": "City", "name": "Bayramoğlu"},
+      {"@type": "City", "name": "Kocaeli"}
+    ],
+    "sameAs": ["https://wa.me/905354792083"]
+  }
+  </script>
+  <!-- Google Sitelinks için WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SİMAK VİNÇ MANİTOU",
+    "alternateName": ["Simak Vinç", "Gebze Vinç Kiralama", "Darıca Manitou Kiralama"],
+    "url": "https://simakvincmanitou.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://simakvincmanitou.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <!-- Google Sitelinks için SiteNavigationElement Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "SİMAK VİNÇ MANİTOU Hizmetler",
+        "description": "Gebze, Darıca ve Kocaeli bölgesinde profesyonel vinç kiralama hizmeti",
+        "url": "https://simakvincmanitou.com/services.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "SİMAK VİNÇ MANİTOU Galeri",
+        "description": "Vinç, Manitou ve forklift çalışma fotoğrafları",
+        "url": "https://simakvincmanitou.com/gallery.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "SİMAK VİNÇ MANİTOU Hakkımızda",
+        "description": "SİMAK VİNÇ MANİTOU hakkında bilgi",
+        "url": "https://simakvincmanitou.com/about.html"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "SİMAK VİNÇ MANİTOU İletişim",
+        "description": "Bize ulaşın - Telefon, WhatsApp, E-posta",
+        "url": "https://simakvincmanitou.com/contact.html"
+      }
+    ]
+  }
+  </script>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hangi bölgelerde hizmet veriyorsunuz?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Darıca, Gebze, Çayırova, Eskihisar ve Bayramoğlu başta olmak üzere Kocaeli genelinde vinç ve Manitou kiralama hizmeti veriyoruz."}
+      },
+      {
+        "@type": "Question",
+        "name": "Operatör desteği sunuyor musunuz?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Evet, tüm vinç ve Manitou kiralamalarında sertifikalı, tecrübeli operatör desteği sağlıyoruz."}
+      },
+      {
+        "@type": "Question",
+        "name": "Minimum kiralama süresi nedir?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Makine tipine göre günlük, haftalık veya aylık kiralama yapılabilir; acil ve kısa süreli işler için saatlik çözümler de sunuyoruz."}
+      },
+      {
+        "@type": "Question",
+        "name": "Manitou MLT 1840 özellikleri neler?",
+        "acceptedAnswer": {"@type": "Answer", "text": "MLT 1840 modelimiz 4 ton kapasite, yaklaşık 18 m kaldırma yüksekliği ve güçlü hidrolik kontrolü ile dar alanlarda yüksek manevra kabiliyeti sağlar."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vinç kiralama fiyatları nasıl belirlenir?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Fiyat; makine tipi, tonaj, kiralama süresi, operatör gereksinimi ve çalışma lokasyonuna göre hesaplanır. En hızlı teklif için telefon veya WhatsApp ile ulaşabilirsiniz."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header: logo + menu + arama butonu (sticky davranışı JS ile) -->
+  <header id="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html" class="brand" aria-label="SİMAK VİNÇ MANİTOU">
+          <img src="img/logo.png" alt="SİMAK VİNÇ MANİTOU logo" class="site-logo" width="112" height="112">
+          <span class="logo-text">SİMAK VİNÇ MANİTOU</span>
+        </a>
+      </div>
+
+      <nav id="main-nav" aria-label="Ana Navigasyon">
+        <ul aria-hidden="false">
+          <li><a href="index.html" class="active">Anasayfa</a></li>
+          <li><a href="services.html">Hizmetler</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+  <a class="call-btn" href="tel:+905354792083" aria-label="Hemen Ara">
+          <svg class="phone-icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;margin-right:8px;">
+            <path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.95-.27c1.05.24 2.19.37 3.39.37a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.13 2.34.37 3.39a1 1 0 01-.27.95l-2.2 2.2z"/>
+          </svg>
+          <span class="blink-text">Hemen Ara</span>
+        </a>
+  <button id="mobile-menu-toggle" aria-label="Menü Aç" aria-expanded="false" aria-controls="main-nav">
+          <svg aria-hidden="true" focusable="false" width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="main-content">
+    <section class="hero">
+      <!-- Video background: yükleme geciktirildi, view ile başlatılır -->
+      <video id="hero-video" class="hero-media hero-video" muted loop playsinline autoplay poster="img/opt/manitou.webp" preload="none" aria-hidden="true" width="1600" height="1200">
+        <source data-src="img/manitou-video.mp4" type="video/mp4">
+        <!-- Fallback image for browsers that don't support video -->
+        <img src="img/opt/manitou.webp" srcset="img/opt/manitou.webp 1600w, img/manitou.webp 2400w" sizes="(max-width: 1200px) 100vw, 1200px" alt="SİMAK VİNÇ MANİTOU" loading="eager" decoding="async" fetchpriority="high" width="1600" height="1200">
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+  <h1 class="fade-in">Gebze ve Darıca'da Manitou Kiralama | 7/24 Telehandler Kiralama Hizmeti</h1>
+  <p class="lead fade-in">Gebze, Darıca, Pelitli, Güzeller OSB, Bayramoğlu, Eskihisar ve Çayırova başta olmak üzere tüm mahallelerimize günlük ve aylık kiralama seçenekleri ile uygun fiyatlı vinç ve telehandler hizmeti. 2020'den beri profesyonel çözümler sunuyoruz.</p>
+        <div class="hero-buttons fade-in">
+          <a class="btn blink-bg" href="tel:+905354792083" aria-label="Hemen Ara">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;margin-right:8px;">
+              <path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.95-.27c1.05.24 2.19.37 3.39.37a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.13 2.34.37 3.39a1 1 0 01-.27.95l-2.2 2.2z"/>
+            </svg>
+            <span class="blink-text">Hemen Ara</span>
+          </a>
+          <a class="btn whatsapp blink-bg" href="https://wa.me/905354792083" target="_blank" rel="noopener">
+            <!-- WhatsApp icon -->
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;margin-right:8px;">
+              <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span class="blink-text">WhatsApp ile İletişime Geç</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- HİZMETLER ÖNİZLEME -->
+    <section class="services preview">
+      <div class="container">
+        <h2>Gebze, Darıca ve Çayırova'da İş Makinesi Kiralama Hizmetlerimiz</h2>
+        <div class="service-cards">
+          <article class="card fade-in">
+            <a class="gallery-item" href="img/gallery/opt/vinc.webp" data-caption="Profesyonel Vinç Kiralama">
+              <picture>
+                <source srcset="img/gallery/opt/vinc.webp" type="image/webp">
+                <img src="img/gallery/opt/vinc.jpg" alt="Profesyonel Vinç Kiralama" loading="lazy" width="600" height="338" sizes="(max-width:700px) 90vw, (max-width:1200px) 50vw, 33vw">
+              </picture>
+            </a>
+            <h3>Gebze Vinç Kiralama - Darıca Mobil Vinç</h3>
+            <p>Ağır yük ve inşaat projeleriniz için güvenilir ve sertifikalı vinç çözümleri.</p>
+            <a class="btn small" href="services.html">Detaylı Bilgi</a>
+          </article>
+
+          <article class="card fade-in">
+            <a class="gallery-item" href="img/gallery/opt/manitou.webp" data-caption="Teleskopik Yükleyici (Manitou) Kiralama">
+              <picture>
+                <source srcset="img/gallery/opt/manitou.webp" type="image/webp">
+                <img src="img/gallery/opt/manitou.jpg" alt="Teleskopik Yükleyici (Manitou) Kiralama" loading="lazy" width="600" height="338" sizes="(max-width:700px) 90vw, (max-width:1200px) 50vw, 33vw">
+              </picture>
+            </a>
+            <h3>Gebze Manitou Kiralama - Darıca Teleskopik Yükleyici</h3>
+            <p>Yüksek erişim ve zorlu arazi koşullarında yük taşıma çözümleri.</p>
+            <a class="btn small" href="services.html">Detaylı Bilgi</a>
+          </article>
+
+          <article class="card fade-in">
+            <a class="gallery-item" href="img/gallery/opt/forklift.webp" data-caption="Depo İçi Forklift Kiralama">
+              <picture>
+                <source srcset="img/gallery/opt/forklift.webp" type="image/webp">
+                <img src="img/gallery/opt/forklift.jpg" alt="Depo İçi Forklift Kiralama" loading="lazy" width="600" height="338" sizes="(max-width:700px) 90vw, (max-width:1200px) 50vw, 33vw">
+              </picture>
+            </a>
+            <h3>Darıca Forklift Kiralama - Depo İçi Forklift</h3>
+            <p>Depo, fabrika ve saha içi malzeme taşıma operasyonları için yüksek performanslı forkliftler.</p>
+            <a class="btn small" href="services.html">Detaylı Bilgi</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <!-- GALERİ ÖNİZLEME -->
+    <section class="gallery-preview">
+      <div class="container">
+        <h2>Galeri</h2>
+        <div class="gallery-grid">
+          <a class="gallery-thumb" href="gallery.html">
+            <picture>
+              <source srcset="img/gallery/opt/7.webp" type="image/webp">
+              <img src="img/gallery/opt/7.jpg" alt="Gebze sanayi bölgesinde Manitou çalışma sahası" loading="lazy" width="640" height="360" decoding="async">
+            </picture>
+          </a>
+          <a class="gallery-thumb" href="gallery.html">
+            <picture>
+              <source srcset="img/gallery/opt/8.webp" type="image/webp">
+              <img src="img/gallery/opt/8.jpg" alt="Darıca bölgesinde vinç kiralama çalışması" loading="lazy" width="640" height="360" decoding="async">
+            </picture>
+          </a>
+          <a class="gallery-thumb" href="gallery.html">
+            <picture>
+              <source srcset="img/gallery/opt/3.webp" type="image/webp">
+              <img src="img/gallery/opt/3.jpg" alt="Bayramoğlu sahilinde vinç ile yük kaldırma" loading="lazy" width="640" height="360" decoding="async">
+            </picture>
+          </a>
+          <a class="gallery-thumb" href="gallery.html">
+            <picture>
+              <source srcset="img/gallery/opt/4.webp" type="image/webp">
+              <img src="img/gallery/opt/4.jpg" alt="Çayırova sanayi bölgesinde vinç ile ağır yük taşıma" loading="lazy" width="640" height="360" decoding="async">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- Müşteri yorumları kaldırıldı; istek üzerine içerik yöneticisi tarafından eklenecek -->
+  <!-- NEDEN SİMAK VİNÇ? -->
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="center">Neden SİMAK VİNÇ MANİTOU'yu Tercih Etmelisiniz?</h2>
+      <div class="highlights-grid">
+        <div class="highlight">
+          <div class="hl-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </div>
+          <h3>2020'den Beri Sektör Tecrübesi</h3>
+          <p>Gebze ve Darıca bölgesinde 2020 yılından bu yana binlerce başarılı proje tamamladık. Uzman ekibimiz ve güvenilir makinelerimizle projenizin aksamaması için 7/24 yanınızdayız.</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h3>Düzenli Bakımlı Makine Parkuru</h3>
+          <p>Tüm Manitou, telehandler ve vinç filomu periyodik bakımları tam zamanında yapılır. TSE belgeli ekipmanlar ve tam sigortalı makinelerle güvenli çalışma garantisi sunuyoruz.</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+          </div>
+          <h3>7/24 Hızlı Teknik Destek</h3>
+          <p>Acil ihtiyaçlarınızda 1-2 saat içinde yerinizde! Hafta sonu, tatil günü fark etmeksizin kesintisiz hizmet. WhatsApp ve telefon ile anında ulaşın, sorunsuz operasyon garantisi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEBZE VE DARICA MAHALLELERİNE HIZLI SERVİS -->
+  <section class="about-preview">
+    <div class="container">
+      <h2 class="center">Gebze ve Darıca Mahallelerine Hızlı Manitou Kiralama Servisi</h2>
+      <div class="about-intro">
+        <p>SİMAK VİNÇ MANİTOU olarak, Gebze'nin <strong>Pelitli, Güzeller OSB, Kirazpınar, Barış ve Tatlıkuyu</strong> mahallelerinde, Darıca'nın <strong>Bayramoğlu, Eskihisar, Nenehatun ve Kazım Karabekir</strong> mahallelerinde, ayrıca Çayırova <strong>Şekerpınar ve Akse</strong> bölgelerinde günlük ve aylık kiralama seçenekleriyle hızlı servis sağlıyoruz.</p>
+        <p>İnşaat, sanayi, lojistik ve tarım projeleriniz için <strong>uygun fiyatlı vinç kiralama</strong>, <strong>telehandler kiralık</strong> ve <strong>Manitou kiralama</strong> hizmetimizle projenizin her aşamasında yanınızdayız. Sertifikalı operatör desteği, esnek ödeme koşulları ve en önemlisi zamana bağlı kalma garantisiyle fark yaratıyoruz.</p>
+        <p><strong>Gebze kiralık Manitou</strong>, <strong>Darıca telehandler kiralama</strong> veya <strong>Çayırova vinç kiralama</strong> ihtiyacınız için hemen arayın. Size özel fiyat teklifi almak sadece bir telefon kadar yakın!</p>
+      </div>
+    </div>
+  </section>
+    <!-- Lightbox / Fullscreen viewer (from gallery.html) to enable homepage items to open fullscreen -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Galeri görüntüleyici">
+      <button class="lb-close" aria-label="Kapat">×</button>
+      <button class="lb-prev" aria-label="Önceki">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+      </button>
+      <div class="lb-viewport">
+        <img class="lb-image" src="" alt="" />
+        <div class="lb-caption" aria-live="polite"></div>
+      </div>
+      <button class="lb-next" aria-label="Sonraki">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        </svg>
+      </button>
+    </div>
+
+  <!-- SIKÇA SORULAN SORULAR (SSS) -->
+    <section class="faq">
+      <div class="container">
+        <h2>Sıkça Sorulan Sorular</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Hangi bölgelerde hizmet veriyorsunuz?</button>
+            <div class="accordion-panel">Kocaeli ve çevresindeki Darıca, Gebze, Çayırova, Eskihisar ve Bayramoğlu bölgelerinde hizmet veriyoruz. İhtiyaca göre farklı lokasyonlara da sevkiyat yapabiliyoruz.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Operatör desteği sunuyor musunuz?</button>
+            <div class="accordion-panel">Evet, makinelerimiz için tecrübeli ve sertifikalı operatör hizmeti sunuyoruz. Operatör ihtiyacı talebe göre fiyatlandırılır. Tüm operatörlerimiz iş güvenliği eğitimlerini tamamlamıştır.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Minimum kiralama süresi nedir?</button>
+            <div class="accordion-panel">Kiralama süresi makine tipine göre değişir; genelde günlük, haftalık veya aylık seçenekler bulunur. Kısa süreli acil ihtiyaçlar için saatlik kiralama da yapabiliyoruz. Size özel teklif için lütfen iletişime geçin.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Vinç ve iş makinesi kiralama fiyatları nasıl belirlenir?</button>
+            <div class="accordion-panel">Fiyatlandırma; makine tipi, tonaj kapasitesi, kiralama süresi, operatör ihtiyacı ve çalışma lokasyonuna göre değişiklik gösterir. En uygun fiyat teklifi için bizi arayarak detaylı bilgi alabilirsiniz. WhatsApp üzerinden hızlı teklif de alabilirsiniz.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">7/24 hizmet veriyor musunuz?</button>
+            <div class="accordion-panel">Evet, 7 gün 24 saat acil vinç ve iş makinesi kiralama hizmeti sunuyoruz. Hafta sonu ve resmi tatillerde de kesintisiz hizmetinizdeyiz. Acil durumlarda anında ulaşabilirsiniz.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Hangi kapasitelerde vinç kiralıyorsunuz?</button>
+            <div class="accordion-panel">Farklı tonaj kapasitelerinde mobil vinçlerimiz mevcuttur. 35 tonluk vinçten daha büyük kapasitelere kadar geniş filomuzla her türlü kaldırma ve taşıma işinize çözüm sunuyoruz. İhtiyacınıza uygun vinç için iletişime geçin.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Manitou teleskopik yükleyici özellikleri nelerdir?</button>
+            <div class="accordion-panel">Manitou 1840 teleskopik yükleyicimiz 18 metre kaldırma yüksekliğine ve 4 ton kaldırma kapasitesine sahiptir. İnşaat, tarım ve endüstriyel projelerde yüksek performans sağlar. Dar alanlarda manevra kabiliyeti yüksektir.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Forklift kiralama hizmeti sunuyor musunuz?</button>
+            <div class="accordion-panel">Evet, depo ve saha içi yükleme-boşaltma işleri için farklı kapasitelerde forklift kiralama hizmeti veriyoruz. Günlük, haftalık ve aylık kiralama seçenekleri mevcuttur.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Makineleriniz sigortalı mı? Güvenlik önlemleriniz nelerdir?</button>
+            <div class="accordion-panel">Tüm makinelerimiz tam kasko ve sorumluluk sigortası ile korunmaktadır. Periyodik bakımları düzenli yapılır ve TSE belgeli ekipmanlar kullanılır. İş güvenliği standartlarına tam uyum sağlanır.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Rezervasyon nasıl yapılır? Ön ödeme gerekli mi?</button>
+            <div class="accordion-panel">Rezervasyon için telefon veya WhatsApp ile iletişime geçebilirsiniz. Tarih ve makine uygunluğuna göre rezervasyonunuz alınır. Ödeme koşulları iş bittikten sonra nakit veya banka havalesi ile yapılır.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Acil durumlarda ne kadar sürede hizmet verebilirsiniz?</button>
+            <div class="accordion-panel">Acil ihtiyaçlarda mümkün olan en kısa sürede makinemizi lokasyonunuza sevk ediyoruz. Gebze, Darıca ve yakın bölgelerde genellikle en geç yarım saat içinde yerinizde olabiliriz. Uzak mesafeler için süre değişkenlik gösterebilir.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle" aria-expanded="false">Hangi ödeme yöntemlerini kabul ediyorsunuz?</button>
+            <div class="accordion-panel">Nakit, banka havalesi (EFT/Havale) ve kurumsal müşteriler için açık hesap seçenekleri sunuyoruz. Ödeme koşulları esnek şekilde belirlenir.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Rezervasyon CTA strip kaldırıldı - sadeleştirme isteği üzerine -->
+  </main>
+
+  <!-- YUKARI ÇIK BUTONU -->
+  <button id="scroll-top" class="scroll-top" aria-label="Yukarı çık">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <!-- SABİT WHATSAPP BUTONU (anasayfa: sol-alt, ikon + yazı) -->
+  <a class="call-fixed-left" href="tel:+905354792083" aria-label="Hemen Ara - 0535 479 2083">
+    <span class="call-text">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;margin-right:8px;">
+        <path fill="currentColor" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 01.95-.27c1.05.24 2.19.37 3.39.37a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.13 2.34.37 3.39a1 1 0 01-.27.95l-2.2 2.2z"/>
+      </svg>
+      <span class="call-label blink-text">Hemen Ara</span>
+    </span>
+  </a>
+  <a class="whatsapp-fixed-left" href="https://wa.me/905354792083" target="_blank" rel="noopener" aria-label="WhatsApp - 0535 479 2083">
+    <span class="wa-text">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;margin-right:8px;">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      <span class="wa-label blink-text">WhatsApp</span>
+    </span>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-cta">
+      <div class="cta-copy">
+        <p class="eyebrow">Hızlı Teklif</p>
+        <h3>Gebze ve Darıca'da Manitou Kiralama İhtiyacınız İçin Hemen Arayın!</h3>
+        <p>7/24 operatörlü vinç, telehandler ve forklift desteği. Aynı gün keşif ve fiyatlama.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="cta-btn primary" href="tel:+905354792083">Hemen Ara</a>
+        <a class="cta-btn ghost" href="https://wa.me/905354792083" target="_blank" rel="noopener">WhatsApp ile Teklif Al</a>
+      </div>
+    </div>
+
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">SİMAK VİNÇ MANİTOU</p>
+        <p>Kocaeli, Gebze, Darıca ve Çayırova'da vinç, Manitou ve forklift kiralama. Sertifikalı operatör, bakımlı filo, hızlı saha desteği.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">7/24 Destek</span>
+          <span class="footer-badge">Operatör Dahil</span>
+          <span class="footer-badge">Hızlı Keşif</span>
+        </div>
+      </div>
+      <div>
+        <h4>Hızlı Menü</h4>
+        <ul>
+          <li><a href="services.html">Hizmetler</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <ul class="footer-contact">
+          <li><span>Telefon</span><a href="tel:+905354792083">0535 479 2083</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/905354792083" target="_blank" rel="noopener">Mesaj Gönder</a></li>
+          <li><span>E-Posta</span><a href="mailto:simakvinc@gmail.com">simakvinc@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Çalışma ve Lokasyon</h4>
+        <p>7/24 destek, aynı gün saha ziyareti.</p>
+        <p>Darıca, Gebze, Çayırova ve çevresi</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2025 SİMAK VİNÇ MANİTOU. Tüm Hakları Saklıdır.</p>
+      <div class="footer-meta">
+        <span>Gebze & Darıca Manitou Kiralama</span>
+        <span>Vinç • Telehandler • Forklift</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Site genel scriptleri - minified for better performance -->
+  <script>
+    // Hero video: only load when in view to avoid initial heavy download.
+    (function(){
+      const video = document.getElementById('hero-video');
+      if(!video) return;
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const source = video.querySelector('source[data-src]');
+      if(!source) return;
+
+      const loadVideo = () => {
+        if(source.dataset.src){
+          source.src = source.dataset.src;
+          source.removeAttribute('data-src');
+          video.load();
+          video.play().catch(()=>{});
+        }
+      };
+
+      if('IntersectionObserver' in window){
+        const obs = new IntersectionObserver((entries)=>{
+          entries.forEach(entry => {
+            if(entry.isIntersecting){
+              loadVideo();
+              obs.disconnect();
+            }
+          });
+        }, { rootMargin: '200px 0px' });
+        obs.observe(video);
+      } else {
+        loadVideo();
+      }
+
+      video.addEventListener('error', () => {
+        video.pause();
+      });
+    })();
+  </script>
+
+  <script src="js/main.min.js?v=20251209m" defer></script>
+</body>
+</html>
+

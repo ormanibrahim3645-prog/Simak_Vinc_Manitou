@@ -1,0 +1,157 @@
+# .htaccess - Performans ve Güvenlik Optimizasyonları
+# SİMAK VİNÇ MANİTOU Web Sitesi
+
+# =====================================================
+# ÖNBELLEK (CACHE) POLİTİKASI
+# PageSpeed: 1 yıl (31536000 saniye) önbellek süresi önerisi
+# =====================================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Varsayılan: 1 hafta
+    ExpiresDefault "access plus 1 week"
+    
+    # Görseller: 1 yıl
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS ve JavaScript: 1 yıl (versiyon parametresi ile cache busting kullanılıyor)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    
+    # Fontlar: 1 yıl
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/eot "access plus 1 year"
+    
+    # HTML: 1 gün (sık güncelleme için)
+    ExpiresByType text/html "access plus 1 day"
+    
+    # JSON ve XML: 1 gün
+    ExpiresByType application/json "access plus 1 day"
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+# Cache-Control header'ları
+<IfModule mod_headers.c>
+    # Görseller için immutable cache
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|ico|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # CSS ve JS için (versiyon parametresi ile cache busting)
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Fontlar için
+    <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # HTML için
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=86400, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# =====================================================
+# GZIP SIKIŞTIRMA
+# =====================================================
+
+<IfModule mod_deflate.c>
+    # Sıkıştırılacak dosya türleri
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+</IfModule>
+
+# =====================================================
+# BROTLI SIKIŞTIRMA (varsa)
+# =====================================================
+
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html
+    AddOutputFilterByType BROTLI_COMPRESS text/plain
+    AddOutputFilterByType BROTLI_COMPRESS text/css
+    AddOutputFilterByType BROTLI_COMPRESS text/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/json
+    AddOutputFilterByType BROTLI_COMPRESS application/xml
+    AddOutputFilterByType BROTLI_COMPRESS text/xml
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+    AddOutputFilterByType BROTLI_COMPRESS font/woff
+    AddOutputFilterByType BROTLI_COMPRESS font/woff2
+</IfModule>
+
+# =====================================================
+# GÜVENLİK HEADER'LARI
+# =====================================================
+
+<IfModule mod_headers.c>
+    # XSS Koruması
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Clickjacking Koruması
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Content Type Sniffing Koruması
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# =====================================================
+# MIME TİPLERİ
+# =====================================================
+
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType image/avif .avif
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# =====================================================
+# ETags Kaldırma (Cache-Control yeterli)
+# =====================================================
+
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# =====================================================
+# HSTS (HTTPS Zorunluluğu) - Sadece HTTPS kullanılıyorsa etkinleştirin
+# =====================================================
+
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>

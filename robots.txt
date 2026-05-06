@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simakvincmanitou.com/sitemap.xml
+
+# Not: Alan adınız farklı ise yukarıdaki URL'yi gerçek domaininizle güncelleyin.
